@@ -5,7 +5,7 @@
     "main": "build/index.js",
     "types": "build/index.d.ts",
     "scripts": {
-        "setup": "npm install --save=false data-forge",
+        "setup": "npm install --save=false data-forge-plot",
         "c": "npm run clean",
         "clean": "rm -rf build/*",
         "b": "npm run build",
@@ -22,7 +22,6 @@
         "test": "jest",
         "tw": "npm run test:watch",
         "test:watch": "jest --watch"
-
     },
     "repository": {
         "type": "git",
@@ -40,13 +39,13 @@
         "opn": "^6.0.0"
     },
     "peerDependencies": {
-        "data-forge-plot": "^0.4.0"
+        "data-forge-plot": "^0.4.3"
     },
     "devDependencies": {
-        "@types/jest": "^24.0.6",
+        "@types/jest": "24.0.6",
         "@types/node": "10.11.4",
-        "jest": "^24.1.0",
-        "ts-jest": "^23.10.5",
+        "jest": "24.1.0",
+        "ts-jest": "23.10.5",
         "ts-node": "7.0.1",
         "tslint": "^5.12.1",
         "typescript": "3.1.1"

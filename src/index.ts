@@ -1,4 +1,4 @@
-import { IPlotAPI, findChartTemplatePath, PlotAPI } from "data-forge-plot/build/plot-api";
+import { IPlotAPI, findChartTemplatePath, AbstractPlotAPI } from "data-forge-plot/build/plot-api";
 import { captureImage, ICaptureOptions } from "capture-template";
 import * as path from "path";
 const opn = require("opn");
@@ -44,7 +44,7 @@ declare module "data-forge-plot/build/plot-api" {
         renderImage(imageFilePath: string, renderOptions?: IRenderOptions): Promise<void>;
     }
 
-    interface PlotAPI {
+    interface AbstractPlotAPI {
 
         /**
          * Render the plot to an image file.
@@ -94,4 +94,4 @@ export async function renderImage(this: IPlotAPI, imageFilePath: string, renderO
     }
 }
 
-PlotAPI.prototype.renderImage = renderImage;
+AbstractPlotAPI.prototype.renderImage = renderImage;
