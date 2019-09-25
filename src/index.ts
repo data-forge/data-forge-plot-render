@@ -13,6 +13,11 @@ export interface IRenderOptions {
     openImage?: boolean;
 
     /**
+     * Path to Nighmare so that a separate external version of Nightmare can be used if necessary.
+     */
+    nightmarePath?: string;
+
+    /**
      * Path to electron, so that electron can be installed separately to a different location and shared
      * between the various packages that need it.
      *
@@ -66,6 +71,7 @@ export async function renderImage(this: IPlotAPI, imageFilePath: string, renderO
     
     const templatePath = renderOptions && renderOptions.template || await findChartTemplatePath();
     const captureOptions: ICaptureOptions = {
+        nightmarePath: renderOptions && renderOptions.nightmarePath,
         electronPath: renderOptions && renderOptions.electronPath,
         inflateOptions: {
             inMemoryFiles: [
