@@ -77,7 +77,7 @@ export async function renderImage(this: IPlotAPI, imageFilePath: string, renderO
             inMemoryFiles: [
                 {
                     file: "chart-def.json",
-                    content: JSON.stringify(
+                    content: Buffer.from(JSON.stringify(
                         { 
                             chartDef, 
                             options: {
@@ -87,7 +87,7 @@ export async function renderImage(this: IPlotAPI, imageFilePath: string, renderO
                         }, 
                         null, 
                         4
-                    ),
+                    )),
                 },
             ],
         },
