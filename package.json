@@ -1,6 +1,6 @@
 {
     "name": "@data-forge-plot/render",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "This plugin augments Data-Forge Plot with a renderImage function for capturing a chart to an image file.",
     "main": "build/index.js",
     "types": "build/index.d.ts",
